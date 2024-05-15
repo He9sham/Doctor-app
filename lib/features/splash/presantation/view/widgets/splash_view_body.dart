@@ -1,5 +1,5 @@
 import 'package:doctor/core/utils/app_router.dart';
-import 'package:doctor/core/utils/styles.dart';
+import 'package:doctor/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +16,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppRouter.sighinview);
+      GoRouter.of(context).push(AppRouter.onboardingview);
     });
   }
 

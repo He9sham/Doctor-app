@@ -1,4 +1,4 @@
-import 'package:doctor/core/utils/styles.dart';
+import 'package:doctor/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomContenerauth extends StatelessWidget {

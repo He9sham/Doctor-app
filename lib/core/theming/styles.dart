@@ -23,8 +23,10 @@ abstract class Styles {
       fontSize: 24,
       fontFamily: GoogleFonts.poppins().fontFamily,
       color: ColorManger.kprimarycolorauth);
-  static const textonbording20 = TextStyle(
-      fontWeight: FontWeight.w600,
-      fontSize: 20,
-      color: ColorManger.kprimarycolorauth);
+  static TextStyle  textonbording20 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+    color: ColorManger.kprimarycolorauth,
+    fontFamily: GoogleFonts.poppins().fontFamily,
+  );
 }
