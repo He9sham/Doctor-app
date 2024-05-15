@@ -10,6 +10,7 @@ class OnboardingViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height * 0.5;
     return OnBoardingSlider(
       finishButtonText: 'Register',
       onFinish: () {
@@ -30,21 +31,21 @@ class OnboardingViewBody extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.sighinview);
       },
       controllerColor: ColorManger.kDarkBlueColor,
-      totalPage: 3, // This matches the length of the pageBodies array
+      totalPage: 3,
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
       background: [
         Image.asset(
           'assets/image/Onboarding_view1.png',
-          height: 400,
+          height: height,
         ),
         Image.asset(
           'assets/image/Onboarding_view2.png',
-          height: 400,
+          height: height,
         ),
         Image.asset(
           'assets/image/Onboarding_view3.png',
-          height: 400,
+          height: height,
         ),
       ],
       speed: 1.8,
