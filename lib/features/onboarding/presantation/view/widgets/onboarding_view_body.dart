@@ -31,7 +31,7 @@ class OnboardingViewBody extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.sighinview);
       },
       controllerColor: ColorManger.kDarkBlueColor,
-      totalPage: 3, // This matches the length of the pageBodies array
+      totalPage: 3,
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
       background: [
