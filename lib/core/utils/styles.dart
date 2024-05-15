@@ -1,3 +1,4 @@
+import 'package:doctor/core/theming/color.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,9 +18,13 @@ abstract class Styles {
   static const colorhintsearch = TextStyle(
     color: Colors.black,
   );
-  static  TextStyle textonbording = TextStyle(
-    fontWeight: FontWeight.normal,
-    fontSize: 24,
-    fontFamily: GoogleFonts.poppins().fontFamily
-  );
+  static TextStyle textonbording24 = TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 24,
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      color: ColorManger.kprimarycolorauth);
+  static const textonbording20 = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+      color: ColorManger.kprimarycolorauth);
 }

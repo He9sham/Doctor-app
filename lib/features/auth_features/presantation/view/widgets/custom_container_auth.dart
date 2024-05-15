@@ -1,4 +1,3 @@
-
 import 'package:doctor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +8,7 @@ class CustomContenerauth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ontap ,
+      onTap: ontap,
       child: Container(
         height: 45,
         width: 300,
@@ -20,7 +19,7 @@ class CustomContenerauth extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: Styles.textonbording.copyWith(
+            style: Styles.textonbording24.copyWith(
               color: Colors.blue,
               fontWeight: FontWeight.bold,
             ),

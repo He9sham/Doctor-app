@@ -32,7 +32,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         Center(
           child: Text(
             'Markaz ElAmal',
-            style: Styles.textonbording.copyWith(
+            style: Styles.textonbording24.copyWith(
               fontFamily: GoogleFonts.peralta().fontFamily,
             ),
           ),
