@@ -1,4 +1,4 @@
-# doctor
+# doctor app
 
 
 ## 🎨   System Design
