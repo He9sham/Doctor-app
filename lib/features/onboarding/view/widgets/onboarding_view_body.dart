@@ -1,6 +1,6 @@
 import 'package:doctor/core/theming/color.dart';
 import 'package:doctor/core/utils/app_router.dart';
-import 'package:doctor/features/onboarding/presantation/view/widgets/custom_container_text_view.dart';
+import 'package:doctor/features/onboarding/view/widgets/custom_container_text_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:go_router/go_router.dart';

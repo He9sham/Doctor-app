@@ -1,5 +1,5 @@
 import 'package:doctor/core/theming/color.dart';
-import 'package:doctor/features/onboarding/presantation/view/widgets/onboarding_view_body.dart';
+import 'package:doctor/features/onboarding/view/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingView extends StatelessWidget {

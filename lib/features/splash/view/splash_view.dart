@@ -1,5 +1,5 @@
 import 'package:doctor/core/utils/finish_class.dart';
-import 'package:doctor/features/splash/presantation/view/widgets/splash_view_body.dart';
+import 'package:doctor/features/splash/view/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

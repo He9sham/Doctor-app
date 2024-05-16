@@ -29,14 +29,13 @@ class _SighInViewBodyState extends State<SighInViewBody> {
             child: SizedBox(
               width: double.infinity,
               height: MediaQuery.sizeOf(context).height / 1.5,
-              child: Stack(
+              child: const Stack(
                 children: [
-                  const Positioned(
+                  Positioned(
                     top: 100,
                     child: ContainerWhiteAuth(),
                   ),
-                  InputUserEmailAndPassAndConfirmForSighIn(
-                      formstate: formstate),
+                  InputUserEmailAndPassAndConfirmForSighIn(),
                 ],
               ),
             ),

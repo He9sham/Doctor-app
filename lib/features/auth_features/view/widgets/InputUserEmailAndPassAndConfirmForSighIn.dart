@@ -1,4 +1,3 @@
-
 import 'package:doctor/const.dart';
 import 'package:doctor/core/utils/app_router.dart';
 import 'package:doctor/features/auth_features/view/widgets/Custom_Text_felid.dart';
@@ -10,10 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 class InputUserEmailAndPassAndConfirmForSighIn extends StatelessWidget {
   const InputUserEmailAndPassAndConfirmForSighIn({
     super.key,
-    required this.formstate,
   });
-
-  final GlobalKey<FormState> formstate;
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +77,7 @@ class InputUserEmailAndPassAndConfirmForSighIn extends StatelessWidget {
               ),
               CustomContenerauth(
                 ontap: () {
-                  if (formstate.currentState!.validate()) {
-    
-                  }
+                  {}
                 },
                 title: 'Sign in',
               ),
@@ -99,8 +93,7 @@ class InputUserEmailAndPassAndConfirmForSighIn extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      GoRouter.of(context)
-                          .push(AppRouter.sighupview);
+                      GoRouter.of(context).push(AppRouter.sighupview);
                     },
                     child: const Text(
                       'Sign Up',

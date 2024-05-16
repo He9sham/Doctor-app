@@ -3,8 +3,8 @@ import 'package:doctor/features/auth_features/view/sigh_in_view.dart';
 import 'package:doctor/features/auth_features/view/sigh_up_view.dart';
 import 'package:doctor/features/auth_features/view/welcome_page.dart';
 import 'package:doctor/features/auth_features/view_models/login_cubit/login_cubit.dart';
-import 'package:doctor/features/onboarding/presantation/view/onboarding_view.dart';
-import 'package:doctor/features/splash/presantation/view/splash_view.dart';
+import 'package:doctor/features/onboarding/view/onboarding_view.dart';
+import 'package:doctor/features/splash/view/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
