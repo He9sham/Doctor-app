@@ -1,7 +1,7 @@
 import 'package:doctor/const.dart';
 import 'package:doctor/core/utils/app_router.dart';
-import 'package:doctor/features/auth_features/presantation/view/widgets/Custom_Text_felid.dart';
-import 'package:doctor/features/auth_features/presantation/view/widgets/custom_container_auth.dart';
+import 'package:doctor/features/auth_features/view/widgets/Custom_Text_felid.dart';
+import 'package:doctor/features/auth_features/view/widgets/custom_container_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';

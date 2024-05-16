@@ -1,4 +1,4 @@
-import 'package:doctor/features/auth_features/presantation/view/widgets/custom_container_welcome.dart';
+import 'package:doctor/features/auth_features/view/widgets/custom_container_welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

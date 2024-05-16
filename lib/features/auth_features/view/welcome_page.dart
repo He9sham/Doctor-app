@@ -1,4 +1,4 @@
-import 'package:doctor/features/auth_features/presantation/view/widgets/welcom_page_body.dart';
+import 'package:doctor/features/auth_features/view/widgets/welcom_page_body.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
