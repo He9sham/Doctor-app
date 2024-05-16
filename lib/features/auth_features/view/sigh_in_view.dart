@@ -1,5 +1,5 @@
 import 'package:doctor/core/theming/color.dart';
-import 'package:doctor/features/auth_features/presantation/view/widgets/sigh_in_view_body.dart';
+import 'package:doctor/features/auth_features/view/widgets/sigh_in_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SighInView extends StatelessWidget {

@@ -1,6 +1,6 @@
-import 'package:doctor/features/auth_features/presantation/view/sections/appbar_section.dart';
-import 'package:doctor/features/auth_features/presantation/view/widgets/InputUserEmailAndPassAndConfirmForSighUp.dart';
-import 'package:doctor/features/auth_features/presantation/view/widgets/container_white_auth.dart';
+import 'package:doctor/features/auth_features/view/sections/appbar_section.dart';
+import 'package:doctor/features/auth_features/view/widgets/InputUserEmailAndPassAndConfirmForSighUp.dart';
+import 'package:doctor/features/auth_features/view/widgets/container_white_auth.dart';
 import 'package:flutter/material.dart';
 
 class SighUpViewBody extends StatefulWidget {
