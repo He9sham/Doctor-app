@@ -28,27 +28,27 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  build_runner: ^2.4.10
-  concentric_transition: ^1.0.3
-  cupertino_icons: ^1.0.6
-  dio: ^5.4.3+1
-  easy_localization: ^3.0.7
-  firebase_core: ^2.31.0
-  flutter:
+  build_runner: ^2.4.10 # Code generation tool for Flutter
+  concentric_transition: ^1.0.3 # Circular transitions for Flutter
+  cupertino_icons: ^1.0.6 # Cupertino Icons for Flutter
+  dio: ^5.4.3+1 # HTTP client for Dart
+  easy_localization: ^3.0.7 # Localization support for Flutter apps
+  firebase_core: ^2.31.0 # Core Firebase functionality for Flutter
+  flutter: # Flutter SDK
     sdk: flutter
-  flutter_bloc: ^8.1.5
-  flutter_onboarding_slider: ^1.0.11
-  flutter_screenutil: ^5.9.1
-  freezed: 2.5.2
-  freezed_annotation: ^2.4.1
-  get_it: ^7.7.0
-  go_router: ^14.1.0
-  google_fonts: ^6.2.1
-  json_annotation: ^4.9.0
-  json_serializable: ^6.8.0
-  pretty_dio_logger: ^1.3.1
-  retrofit: ^4.1.0
-  retrofit_generator: ^8.1.0
+  flutter_bloc: ^8.1.5 # State management solution for Flutter
+  flutter_onboarding_slider: ^1.0.11 # Onboarding slider for Flutter
+  flutter_screenutil: ^5.9.1 # Screen size utility for Flutter
+  freezed: 2.5.2 # Immutable classes for Flutter
+  freezed_annotation: ^2.4.1 # Annotations for Freezed package
+  get_it: ^7.7.0 # Service locator for Dart
+  go_router: ^14.1.0 # Routing library for Flutter
+  google_fonts: ^6.2.1 # Google Fonts integration for Flutter
+  json_annotation: ^4.9.0 # JSON serialization annotations for Dart
+  json_serializable: ^6.8.0 # JSON serialization code generator for Dart
+  pretty_dio_logger: ^1.3.1 # Logger for Dio HTTP client
+  retrofit: ^4.1.0 # Retrofit implementation for Dart
+  retrofit_generator: ^8.1.0 # Code generator for Retrofit
 
 dev_dependencies:
   flutter_lints: ^3.0.0
