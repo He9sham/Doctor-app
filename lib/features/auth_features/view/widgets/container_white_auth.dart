@@ -5,7 +5,7 @@ class ContainerWhiteAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.sizeOf(context).height / 1.8,
+      height: MediaQuery.sizeOf(context).height / 1.5,
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
         color: Colors.white,

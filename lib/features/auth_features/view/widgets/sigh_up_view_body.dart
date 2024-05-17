@@ -20,7 +20,7 @@ class _SighUpViewBodyState extends State<SighUpViewBody> {
           title: 'Letis Start with\nsign up',
         ),
         SizedBox(
-          height: MediaQuery.sizeOf(context).height * 0.2,
+          height: MediaQuery.sizeOf(context).height * 0.1,
         ),
         Expanded(
           child: SizedBox(

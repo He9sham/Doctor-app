@@ -23,7 +23,7 @@ class _SighInViewBodyState extends State<SighInViewBody> {
             title: 'Letis Start with\nsign in',
           ),
           SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.2,
+            height: MediaQuery.sizeOf(context).height * 0.15,
           ),
           Expanded(
             child: SizedBox(

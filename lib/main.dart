@@ -1,19 +1,10 @@
 import 'package:doctor/core/di/dependency_injection.dart';
-import 'package:doctor/core/utils/app_router.dart';
+import 'package:doctor/docapp.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
+void main() async {
+   await ScreenUtil.ensureScreenSize();
   setupGetIt();
   runApp(const DoctorApp());
-}
-
-class DoctorApp extends StatelessWidget {
-  const DoctorApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner: false,
-    );
-  }
 }
