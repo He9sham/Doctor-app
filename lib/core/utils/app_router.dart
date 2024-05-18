@@ -1,8 +1,7 @@
 import 'package:doctor/core/di/dependency_injection.dart';
-import 'package:doctor/features/auth_features/view/sigh_in_view.dart';
-import 'package:doctor/features/auth_features/view/sigh_up_view.dart';
-import 'package:doctor/features/auth_features/view/welcome_page.dart';
-import 'package:doctor/features/auth_features/view_models/login_cubit/login_cubit.dart';
+import 'package:doctor/features/home/view/welcome_page.dart';
+import 'package:doctor/features/login/view/sigh_in_view.dart';
+import 'package:doctor/features/login/view_models/login_cubit/login_cubit.dart';
 import 'package:doctor/features/onboarding/view/onboarding_view.dart';
 import 'package:doctor/features/splash/view/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,10 +28,10 @@ abstract class AppRouter {
         child: const SighInView(),
       ),
     ),
-    GoRoute(
-      path: sighupview,
-      builder: (context, state) => const SighUpView(),
-    ),
+    // GoRoute(
+    //   path: sighupview,
+    //   builder: (context, state) => const SighUpView(),
+    // ),
     GoRoute(
       path: welcomeview,
       builder: (context, state) => const WelcomePage(),

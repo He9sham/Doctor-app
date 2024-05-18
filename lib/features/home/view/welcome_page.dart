@@ -1,15 +1,16 @@
-import 'package:doctor/features/auth_features/view/widgets/custom_container_welcome.dart';
+import 'package:doctor/features/home/view/custom_container_welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class WelcomPageBody extends StatelessWidget {
-  const WelcomPageBody({super.key});
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return  Scaffold(
+     body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Center(
+       const  Center(
           child: CustomContanierWelcome(),
         ),
         Text(
@@ -36,6 +37,7 @@ class WelcomPageBody extends StatelessWidget {
           ),
         ),
       ],
+    ),
     );
   }
 }

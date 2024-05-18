@@ -7,7 +7,7 @@ class OnboardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: ColorManger.kprimarycolorauth,
+      backgroundColor: ColorsManager.kprimarycolorauth,
       body: OnboardingViewBody(),
     );
   }

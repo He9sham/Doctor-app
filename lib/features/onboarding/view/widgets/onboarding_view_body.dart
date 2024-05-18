@@ -14,23 +14,23 @@ class OnboardingViewBody extends StatelessWidget {
     return OnBoardingSlider(
       finishButtonText: 'Register',
       onFinish: () {
-        GoRouter.of(context).push(AppRouter.sighupview);
+        // GoRouter.of(context).push(AppRouter.sighupview);
       },
       finishButtonStyle: const FinishButtonStyle(
-        backgroundColor: ColorManger.kDarkBlueColor,
+        backgroundColor: ColorsManager.kDarkBlueColor,
       ),
       trailing: const Text(
         'Login',
         style: TextStyle(
           fontSize: 16,
-          color: ColorManger.kDarkBlueColor,
+          color: ColorsManager.kDarkBlueColor,
           fontWeight: FontWeight.w600,
         ),
       ),
       trailingFunction: () {
         GoRouter.of(context).push(AppRouter.sighinview);
       },
-      controllerColor: ColorManger.kDarkBlueColor,
+      controllerColor: ColorsManager.kDarkBlueColor,
       totalPage: 3,
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
