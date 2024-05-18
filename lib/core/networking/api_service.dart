@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:doctor/core/networking/api_constanse.dart';
-import 'package:doctor/features/auth_features/data/models/login_request_body.dart';
-import 'package:doctor/features/auth_features/data/models/login_response.dart';
+import 'package:doctor/features/login/data/models/login_request_body.dart';
+import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:retrofit/http.dart';
 part 'api_service.g.dart';
 @RestApi(baseUrl: ApiConstaens.apiBaseUrl)
