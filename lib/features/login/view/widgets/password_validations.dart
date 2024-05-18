@@ -1,4 +1,5 @@
 import 'package:doctor/core/helper/spacing.dart';
+import 'package:doctor/core/theming/color.dart';
 import 'package:doctor/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,7 @@ class PasswordValidations extends StatelessWidget {
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.green,
             decorationThickness: 2,
-            color: hasValidated ? Colors.grey : Colors.white,
+            color: hasValidated ? Colors.grey : ColorsManager.darkBlue,
           ),
         )
       ],

@@ -1,4 +1,5 @@
-import 'package:doctor/core/theming/styles.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:doctor/core/helper/awesome_widgets.dart';
 import 'package:doctor/core/utils/app_router.dart';
 import 'package:doctor/features/login/view_models/login_cubit/login_cubit.dart';
 import 'package:doctor/features/login/view_models/login_cubit/login_state.dart';
@@ -28,39 +29,13 @@ class LoginBlocListener extends StatelessWidget {
             GoRouter.of(context).push(AppRouter.welcomeview);
           },
           error: (error) {
-            setupErrorState(context, error);
+            context.pop();
+            awesomeWidgets(context, DialogType.error, 'Error',
+                'Incorrect email or password');
           },
         );
       },
-    );
-  }
-
-  void setupErrorState(BuildContext context, String error) {
-    context.pop();
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        icon: const Icon(
-          Icons.error,
-          color: Colors.red,
-          size: 32,
-        ),
-        content: Text(
-          error,
-          style: Styles.textmid,
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              context.pop();
-            },
-            child: const Text(
-              'Got it',
-              style: Styles.textmid,
-            ),
-          ),
-        ],
-      ),
+      child: const SizedBox.shrink(),
     );
   }
 }
