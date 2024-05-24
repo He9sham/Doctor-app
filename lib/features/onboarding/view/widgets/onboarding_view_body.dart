@@ -12,12 +12,12 @@ class OnboardingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.sizeOf(context).height * 0.5;
     return OnBoardingSlider(
-      finishButtonText: 'Register',
-      onFinish: () {
-        // GoRouter.of(context).push(AppRouter.sighupview);
-      },
+      // finishButtonText: 'Register',
+      // onFinish: () {
+      //   GoRouter.of(context).push(AppRouter.sighupview);
+      // },
       finishButtonStyle: const FinishButtonStyle(
-        backgroundColor: ColorsManager.kDarkBlueColor,
+        backgroundColor: Colors.white,
       ),
       trailing: const Text(
         'Login',
