@@ -9,7 +9,6 @@ import 'package:doctor/features/login/view/widgets/text_auth_welcome.dart';
 import 'package:doctor/features/login/view_models/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SighInView extends StatelessWidget {
   const SighInView({super.key});
@@ -22,17 +21,13 @@ class SighInView extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
-                  height: 20.h,
-                ),
+              verticalSpace(20),
                 const TextAuthWelcome(
                   title: 'Welcome Back',
                   subtitle:
                       "We're excited to have you back, can't wait to see what you've been up to since you last logged in",
                 ),
-                SizedBox(
-                  height: 36.h,
-                ),
+              verticalSpace(36),
                 const EmailAndPassword(),
                 const SizedBox(
                   height: 8,
@@ -49,9 +44,7 @@ class SighInView extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 16.h,
-                ),
+               verticalSpace(16),
                 AppTextButton(
                   buttonHeight: 52,
                   buttonWidth: 330,
