@@ -5,15 +5,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextAuthWelcome extends StatelessWidget {
   const TextAuthWelcome(
-      {super.key, required this.title, required this.subtitle});
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      required this.padding});
   final String title, subtitle;
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Padding(
-          padding:
-              EdgeInsets.only(right: MediaQuery.sizeOf(context).width * 0.4),
+          padding: padding,
           child: Text(
             title,
             style: Styles.font14DarkBlueMedium.copyWith(

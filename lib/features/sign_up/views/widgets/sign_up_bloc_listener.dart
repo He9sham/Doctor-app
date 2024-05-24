@@ -1,7 +1,6 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:doctor/core/helper/awesome_widgets.dart';
 import 'package:doctor/core/utils/app_router.dart';
-import 'package:doctor/features/login/view_models/login_cubit/login_state.dart';
 import 'package:doctor/features/sign_up/view_models/signup_cubit/sign_up_cubit.dart';
 import 'package:doctor/features/sign_up/view_models/signup_cubit/sign_up_state.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ class SignUpBlocListener extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<SignupCubit , SignupState>(
       listenWhen: (previous, current) =>
-          current is Loading || current is Error || current is Success,
+          current is SignupLoading || current is SignupError || current is SignupSuccess,
       listener: (context , state)
       {
         state.whenOrNull(
@@ -28,7 +27,7 @@ class SignUpBlocListener extends StatelessWidget {
           },
           signupError: (error) {
             context.pop();
-            awesomeWidgets(context, DialogType.error, 'Error', error);
+            awesomeWidgets(context, DialogType.error, 'Error', 'The email has already Created');
           },
           signupSuccess: (loginResposn) {
             context.pop();
