@@ -35,7 +35,7 @@ class SighupView extends StatelessWidget {
                 AppTextButton(
                   buttonHeight: 52,
                   buttonWidth: 330,
-                  buttonText: 'Login',
+                  buttonText: 'Create Account',
                   textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
