@@ -1,4 +1,6 @@
 # doctor app
+
+// flutter build apk --flavor production -t lid/main_production.dart
 // dart run build_runner build --delete-conflicting-outputs 
 
 ## 🎨   System Design
