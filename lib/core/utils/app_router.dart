@@ -1,4 +1,5 @@
 import 'package:doctor/core/di/dependency_injection.dart';
+import 'package:doctor/features/home/view/home_page.dart';
 import 'package:doctor/features/home/view/welcome_page.dart';
 import 'package:doctor/features/login/view/sigh_in_view.dart';
 import 'package:doctor/features/login/view_models/login_cubit/login_cubit.dart';
@@ -14,6 +15,7 @@ abstract class AppRouter {
   static String sighupview = '/sighupview';
   static String welcomeview = '/welcomeview';
   static String onboardingview = '/onboardingview';
+  static String homepage = '/homepage';
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
@@ -40,6 +42,10 @@ abstract class AppRouter {
     GoRoute(
       path: welcomeview,
       builder: (context, state) => const WelcomePage(),
+    ),
+    GoRoute(
+      path: homepage,
+      builder: (context, state) => const HomePage(),
     ),
   ]);
 }
