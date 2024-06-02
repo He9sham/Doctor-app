@@ -8,15 +8,15 @@ class CustomStackFindNearby extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 343.w,
-      height: 200.h,
+      width: MediaQuery.sizeOf(context).width * 0.95,
+      height: MediaQuery.sizeOf(context).height * 0.26,
       child: Stack(
         children: [
           Positioned(
             top: MediaQuery.sizeOf(context).height * 0.04,
             child: Container(
               width: 343.w,
-              height: 167.h,
+              height: MediaQuery.sizeOf(context).height * 0.21,
               decoration: BoxDecoration(
                 color: const Color(0xff247CFF),
                 borderRadius: BorderRadius.circular(24),
@@ -29,7 +29,7 @@ class CustomStackFindNearby extends StatelessWidget {
                     const Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Book and\n schedule with\n nearest doctor',
+                        ' Book and\n schedule with\n nearest doctor',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -65,7 +65,7 @@ class CustomStackFindNearby extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: MediaQuery.sizeOf(context).width * 0.5,
+            left: MediaQuery.sizeOf(context).width * 0.54,
             child: Image.asset('assets/image/Image.png'),
           )
         ],
