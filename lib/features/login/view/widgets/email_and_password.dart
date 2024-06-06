@@ -2,7 +2,7 @@ import 'package:doctor/core/helper/app_regex.dart';
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/widgets/app_text_form_field.dart';
 import 'package:doctor/features/login/view/widgets/password_validations.dart';
-import 'package:doctor/features/login/view_models/login_cubit/login_cubit.dart';
+import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
