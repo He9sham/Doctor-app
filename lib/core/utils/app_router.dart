@@ -47,7 +47,7 @@ abstract class AppRouter {
     GoRoute(
       path: homepage,
       builder: (context, state) => BlocProvider(
-        create: (context) => HomeCubit(getIt()),
+        create: (context) => HomeCubit(getIt())..onGetSpecialization(),
         child: const HomePage(),
       ),
     ),
