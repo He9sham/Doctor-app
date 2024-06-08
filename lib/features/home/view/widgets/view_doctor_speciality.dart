@@ -1,10 +1,11 @@
 import 'package:doctor/core/helper/spacing.dart';
+import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ViewDoctorSpecialityItem extends StatelessWidget {
-  const ViewDoctorSpecialityItem({super.key});
-
+  const ViewDoctorSpecialityItem({super.key, required this.data});
+  final SpecializationsData data;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,9 +25,9 @@ class ViewDoctorSpecialityItem extends StatelessWidget {
             ),
           ),
           verticalSpace(5),
-          const Text(
-            'hesham',
-            style: TextStyle(
+           Text(
+            data.name ?? 'Health',
+            style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,
             ),
