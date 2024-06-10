@@ -24,9 +24,6 @@ class HomePage extends StatelessWidget {
               ),
               verticalSpace(16),
               const CustomBlocBuilderForSpecializationDoctor(),
-              // const RowShowTextTitle(
-              //   title: 'Recommendation Doctor',
-              // ),
             ],
           ),
         ),

@@ -4,6 +4,7 @@ import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/logic/home_state.dart';
 import 'package:doctor/features/home/view/widgets/custom_list_view_doctor_item.dart';
 import 'package:doctor/features/home/view/widgets/doctor_speciality_listview.dart';
+import 'package:doctor/features/home/view/widgets/row_show_text_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -55,9 +56,14 @@ class SetupSpecializationSussess extends StatelessWidget {
           DoctorSpecialityListView(
             specializationList: specializationlist ?? [],
           ),
-          verticalSpace(16),
-          CustomListViewDoctorItem(
-            doctorlist: specializationlist?[0]?.doctorsList ?? [],
+          verticalSpace(14),
+          const RowShowTextTitle(
+            title: 'Recommendation Doctor',
+          ),
+          Expanded(
+            child: CustomListViewDoctorItem(
+              doctorlist: specializationlist?[1]?.doctorsList ?? [],
+            ),
           ),
         ],
       ),
