@@ -1,7 +1,7 @@
-import 'package:doctor/core/utils/app_router.dart';
+import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/home/view/widgets/custom_container_welcome.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -16,10 +16,9 @@ class _WelcomePageState extends State<WelcomePage> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppRouter.homepage);
+      context.pushNamed(Routes.homeScreen);
     });
   }
-
 
   @override
   Widget build(BuildContext context) {

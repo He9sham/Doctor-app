@@ -1,16 +1,17 @@
+import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/theming/styles.dart';
-import 'package:doctor/core/utils/app_router.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/core/widgets/app_text_button.dart';
+import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/widgets/email_and_password.dart';
 import 'package:doctor/features/login/view/widgets/login_bloc_listener.dart';
 import 'package:doctor/features/login/view/widgets/row_text_have_acc.dart';
 import 'package:doctor/features/login/view/widgets/terms_conditions_text.dart';
 import 'package:doctor/features/login/view/widgets/text_auth_welcome.dart';
-import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
+
 
 class SighInView extends StatelessWidget {
   const SighInView({super.key});
@@ -69,7 +70,7 @@ class SighInView extends StatelessWidget {
                   title: 'Don\'t have an account?',
                   suptitle: 'Sign up',
                   onpressed: () {
-                    GoRouter.of(context).push(AppRouter.sighupview);
+                    context.pushNamed(Routes.signUpScreen);
                   },
                 ),
                 const LoginBlocListener(),

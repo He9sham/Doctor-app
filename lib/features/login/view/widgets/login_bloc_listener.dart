@@ -1,11 +1,12 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:doctor/core/helper/awesome_widgets.dart';
-import 'package:doctor/core/utils/app_router.dart';
+import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/logic/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
+
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -26,7 +27,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (loginResposn) {
             context.pop();
-            GoRouter.of(context).push(AppRouter.welcomeview);
+            context.pushNamed(Routes.homeScreen);
           },
           error: (error) {
             context.pop();

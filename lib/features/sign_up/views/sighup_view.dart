@@ -1,3 +1,4 @@
+import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/widgets/app_text_button.dart';
 import 'package:doctor/features/login/view/widgets/row_text_have_acc.dart';
@@ -8,7 +9,6 @@ import 'package:doctor/features/sign_up/views/widgets/sign_up_bloc_listener.dart
 import 'package:doctor/features/sign_up/views/widgets/sign_up_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class SighupView extends StatelessWidget {
   const SighupView({super.key});
@@ -52,7 +52,7 @@ class SighupView extends StatelessWidget {
                   title: 'Already have an account yet?',
                   suptitle: 'Sign In',
                   onpressed: () {
-                    GoRouter.of(context).pop();
+                    context.pop();
                   },
                 ),
               ],
