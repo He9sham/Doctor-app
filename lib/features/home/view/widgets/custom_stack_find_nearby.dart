@@ -1,3 +1,4 @@
+import 'package:doctor/core/helper/shared_pref_helper.dart';
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,13 +48,18 @@ class CustomStackFindNearby extends StatelessWidget {
                           borderRadius: BorderRadius.circular(48),
                           color: Colors.white,
                         ),
-                        child: const Center(
-                          child: Text(
-                            'Find Nearby',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Color(0xff247CFF),
-                              fontWeight: FontWeight.w400,
+                        child: Center(
+                          child: GestureDetector(
+                            onTap: () {
+                              SharedPrefHelper.clearAllData();
+                            },
+                            child: const Text(
+                              'Find Nearby',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color(0xff247CFF),
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                         ),
