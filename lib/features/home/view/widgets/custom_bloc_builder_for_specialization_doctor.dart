@@ -7,6 +7,7 @@ import 'package:doctor/features/home/view/widgets/doctor_speciality_listview.dar
 import 'package:doctor/features/home/view/widgets/row_show_text_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shimmer/shimmer.dart';
 
 class CustomBlocBuilderForSpecializationDoctor extends StatelessWidget {
   const CustomBlocBuilderForSpecializationDoctor({super.key});
@@ -78,10 +79,24 @@ class SetupSpecializationloading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      height: 100,
-      child: Center(
-        child: CircularProgressIndicator(),
+    return SizedBox(
+      width: MediaQuery.sizeOf(context).width * 0.9,
+      height: MediaQuery.sizeOf(context).height * 0.5,
+      child: Shimmer.fromColors(
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: ListView.builder(
+          itemCount: 7,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Container(
+                height: MediaQuery.sizeOf(context).height * 0.06,
+                width: MediaQuery.sizeOf(context).width * 0.9,
+                color: Colors.white,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
