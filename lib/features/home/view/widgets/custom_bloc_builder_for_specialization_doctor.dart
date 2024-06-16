@@ -1,4 +1,5 @@
-import 'package:doctor/core/helper/spacing.dart';
+import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/logic/home_state.dart';
@@ -57,13 +58,15 @@ class SetupSpecializationSussess extends StatelessWidget {
           DoctorSpecialityListView(
             specializationList: specializationlist ?? [],
           ),
-          verticalSpace(14),
-          const RowShowTextTitle(
+          RowShowTextTitle(
+            onPressed: () {
+              context.pushNamed(Routes.recommendationScreen);
+            },
             title: 'Recommendation Doctor',
           ),
           Expanded(
             child: CustomListViewDoctorItem(
-              doctorlist: specializationlist?[1]?.doctorsList ?? [],
+              doctorlist: specializationlist?[0]?.doctorsList ?? [],
             ),
           ),
         ],
