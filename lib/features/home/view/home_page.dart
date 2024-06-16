@@ -1,4 +1,6 @@
+import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/spacing.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/home/view/widgets/custom_appbar.dart';
 import 'package:doctor/features/home/view/widgets/custom_bloc_builder_for_specialization_doctor.dart';
 import 'package:doctor/features/home/view/widgets/custom_stack_find_nearby.dart';
@@ -20,7 +22,9 @@ class HomePage extends StatelessWidget {
               const CustomStackFindNearby(),
               verticalSpace(11),
               RowShowTextTitle(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routes.doctorSpecializationScreen);
+                },
                 title: 'Doctor Speciality',
               ),
               verticalSpace(9),

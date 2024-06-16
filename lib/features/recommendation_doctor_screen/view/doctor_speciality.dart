@@ -5,9 +5,6 @@ class DoctorSpeciality extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DoctorSpeciality'),
-      ),
       body: Column(
         children: [
           Container(),
