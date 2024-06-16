@@ -7,6 +7,7 @@ import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/sigh_in_view.dart';
 import 'package:doctor/features/navigation_appbar_controlor.dart';
 import 'package:doctor/features/onboarding/view/onboarding_view.dart';
+import 'package:doctor/features/recommendation_doctor_screen/view/recommend_doc_view.dart';
 import 'package:doctor/features/sign_up/view_models/signup_cubit/sign_up_cubit.dart';
 import 'package:doctor/features/sign_up/views/sighup_view.dart';
 import 'package:doctor/features/splash/view/splash_view.dart';
@@ -55,6 +56,10 @@ class AppRouter {
             create: (context) => HomeCubit(getIt())..onGetSpecialization(),
             child: const HomePage(),
           ),
+        );
+      case Routes.recommendationScreen:
+        return MaterialPageRoute(
+          builder: (_) => const RecommendDocView(),
         );
       default:
         return null;

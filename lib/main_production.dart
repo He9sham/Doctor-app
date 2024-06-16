@@ -1,5 +1,6 @@
 import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/core/helper/constans.dart';
+import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/shared_pref_helper.dart';
 import 'package:doctor/core/utils/app_router.dart';
 import 'package:doctor/docapp.dart';
@@ -17,12 +18,11 @@ void main() async {
 }
 
 checkIfLoggedInUser() async {
-  String? usertoken =
+  String? userToken =
       await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
-
-  if (usertoken != null && usertoken.isNotEmpty) {
-    isLoggedInUser = false;
-  } else {
+  if (!userToken.isNullOrEmpty()) {
     isLoggedInUser = true;
+  } else {
+    isLoggedInUser = false;
   }
 }
