@@ -54,7 +54,10 @@ class AppRouter {
         );
       case Routes.recommendationScreen:
         return MaterialPageRoute(
-          builder: (_) => const RecommendDocView(),
+          builder: (_) => BlocProvider(
+            create: (context) => HomeCubit(getIt())..onGetSpecialization(),
+            child: const RecommendDocView(),
+          ),
         );
       default:
         return null;
