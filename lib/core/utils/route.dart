@@ -1,4 +1,5 @@
 class Routes {
+   static const String doctorSpecializationScreen = '/doctorSpecializationScreen';
   static const String recommendationScreen = '/recommendationScreen';
   static const String welcomeScreen = '/welcomeScreen';
   static const String splashScreen = '/splashScreen';
