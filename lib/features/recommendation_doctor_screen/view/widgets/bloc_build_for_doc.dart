@@ -12,7 +12,8 @@ class BlocBuildForDoc extends StatefulWidget {
   State<BlocBuildForDoc> createState() => _BlocBuildForDocState();
 }
 
-class _BlocBuildForDocState extends State<BlocBuildForDoc> with AutomaticKeepAliveClientMixin {
+class _BlocBuildForDocState extends State<BlocBuildForDoc>
+    with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
   @override
@@ -33,7 +34,7 @@ class _BlocBuildForDocState extends State<BlocBuildForDoc> with AutomaticKeepAli
                 specializationsResponseModel.specializationDataList;
             return Expanded(
               child: CustomListViewDoctorItem(
-                doctorlist: specializationlist?[1]?.doctorsList ?? [],
+                doctorlist: specializationlist?[2]?.doctorsList ?? [],
               ),
             );
           },

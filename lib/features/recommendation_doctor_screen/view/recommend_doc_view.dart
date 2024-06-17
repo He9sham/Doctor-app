@@ -12,10 +12,13 @@ class RecommendDocView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
           child: Column(
             children: [
-              const CustomAppBar(),
+              const CustomAppBarForDocDitels(
+                num: 45,
+                title: 'Recommendation Doctor',
+              ),
               verticalSpace(32),
               CustomSearch(
                 name: 'Search',

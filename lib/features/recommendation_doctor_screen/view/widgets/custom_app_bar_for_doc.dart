@@ -2,9 +2,11 @@ import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
-
+class CustomAppBarForDocDitels extends StatelessWidget {
+  const CustomAppBarForDocDitels(
+      {super.key, required this.title, required this.num});
+  final String title;
+  final double num;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -25,10 +27,10 @@ class CustomAppBar extends StatelessWidget {
             child: const Icon(Icons.arrow_back),
           ),
         ),
-        horizontalSpace(45),
-        const Text(
-          'Recommendation Doctor',
-          style: TextStyle(
+        horizontalSpace(num),
+        Text(
+          title,
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
