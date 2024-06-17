@@ -13,11 +13,10 @@ class DoctorApp extends StatelessWidget {
       designSize: const Size(375, 812),
       child: MaterialApp(
         // Assuming AppRouter.homepage and AppRouter.router need to be explicitly typed or casted
-        initialRoute: isLoggedInUser ? Routes.splashScreen : Routes.homeScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.splashScreen,
         onGenerateRoute: appRouter.generateRoute,
         debugShowCheckedModeBanner: false,
       ),
     );
   }
-// In docapp.dart
 }

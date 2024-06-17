@@ -67,7 +67,10 @@ class AppRouter {
         );
       case Routes.doctorSpecializationScreen:
         return MaterialPageRoute(
-          builder: (_) => const DoctorSpeciality(),
+          builder: (_) => BlocProvider(
+            create: (context) => HomeCubit(getIt())..onGetSpecialization(),
+            child: const DoctorSpeciality(),
+          ),
         );
       default:
         return null;
