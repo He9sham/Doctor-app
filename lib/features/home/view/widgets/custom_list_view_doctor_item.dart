@@ -10,7 +10,7 @@ class CustomListViewDoctorItem extends StatelessWidget {
     return ListView.builder(
         itemCount: doctorlist.length,
         itemBuilder: (context, index) {
-          return  Padding(
+          return Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: CustomItemDoctor(
               data: doctorlist[index],

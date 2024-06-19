@@ -1,9 +1,9 @@
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/logic/home_state.dart';
-import 'package:doctor/features/home/view/widgets/custom_bloc_builder_for_specialization_doctor.dart';
 import 'package:doctor/features/home/view/widgets/custom_list_view_doctor_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shimmer/shimmer.dart';
 
 class BlocBuildForDoc extends StatefulWidget {
   const BlocBuildForDoc({super.key});
@@ -27,7 +27,7 @@ class _BlocBuildForDocState extends State<BlocBuildForDoc>
       builder: (context, state) {
         return state.maybeWhen(
           speciializationloading: () {
-            return const SetupSpecializationloading();
+            return const SetupSpecializationloadingForDocList();
           },
           speciializationsussess: (specializationsResponseModel) {
             var specializationlist =
@@ -46,6 +46,40 @@ class _BlocBuildForDocState extends State<BlocBuildForDoc>
           },
         );
       },
+    );
+  }
+}
+
+class SetupSpecializationloadingForDocList extends StatelessWidget {
+  const SetupSpecializationloadingForDocList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.sizeOf(context).width * 0.9,
+      height: MediaQuery.sizeOf(context).height * 0.7,
+      child: Shimmer.fromColors(
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Container(
+                      height: MediaQuery.sizeOf(context).height * 0.09,
+                      width: MediaQuery.sizeOf(context).width * 0.9,
+                      color: Colors.white,
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
