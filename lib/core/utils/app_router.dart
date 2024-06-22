@@ -3,6 +3,7 @@ import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/view/home_page.dart';
 import 'package:doctor/features/home/view/welcome_page.dart';
+import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/sigh_in_view.dart';
 import 'package:doctor/features/onboarding/view/onboarding_view.dart';
@@ -47,10 +48,13 @@ class AppRouter {
           ),
         );
       case Routes.homeScreen:
+        final loginResponse = arguments;
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => HomeCubit(getIt())..onGetSpecialization(),
-            child: const HomePage(),
+            child:  HomePage(
+              loginResponse: loginResponse as LoginResponse ,
+            ),
           ),
         );
       case Routes.recommendationScreen:
