@@ -7,9 +7,9 @@ import 'package:doctor/features/login/logic/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
@@ -20,23 +20,26 @@ class LoginBlocListener extends StatelessWidget {
           loading: () {
             showDialog(
               context: context,
-              builder: (context) => const Center(
-                child: CircularProgressIndicator(),
-              ),
+              builder: (context) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                ); // Or any other placeholder widget
+              },
             );
           },
-          success: (loginResposn) {
-            context.pop();
-            context.pushNamed(Routes.homeScreen);
+          success: (loginResponse) {
+            context.pop(); // Close the dialog
+            context.pushNamed(Routes.homeScreen, arguments:loginResponse); // Navigate to home screen
           },
           error: (error) {
-            context.pop();
+            context.pop(); // Close the dialog
             awesomeWidgets(context, DialogType.error, 'Error',
                 'Incorrect email or password');
           },
         );
       },
-      child: const SizedBox.shrink(),
+      child: const SizedBox
+          .shrink(), // Empty widget to satisfy the BlocListener requirement
     );
   }
 }
