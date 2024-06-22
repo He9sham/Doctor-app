@@ -8,14 +8,14 @@ class DoctorSpecialityListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * 0.15,
+      height: MediaQuery.sizeOf(context).height * 0.13,
       child: ListView.builder(
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,
         itemCount: specializationList.length,
         itemBuilder: (context, index) {
-          return  ViewDoctorSpecialityItem(
-            data: specializationList[index] ?? SpecializationsData(), 
+          return ViewDoctorSpecialityItem(
+            data: specializationList[index] ?? SpecializationsData(),
           );
         },
       ),

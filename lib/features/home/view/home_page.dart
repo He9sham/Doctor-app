@@ -18,11 +18,12 @@ class HomePage extends StatelessWidget {
               verticalSpace(15),
               const CustomAppbar(),
               const CustomStackFindNearby(),
-              verticalSpace(24),
-              const RowShowTextTitle(
+              verticalSpace(11),
+              RowShowTextTitle(
+                onPressed: () {},
                 title: 'Doctor Speciality',
               ),
-              verticalSpace(16),
+              verticalSpace(9),
               const CustomBlocBuilderForSpecializationDoctor(),
             ],
           ),
