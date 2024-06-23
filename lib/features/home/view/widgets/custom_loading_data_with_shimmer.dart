@@ -11,8 +11,8 @@ class SetupSpecializationloading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.sizeOf(context).width * 0.9,
-      height: MediaQuery.sizeOf(context).height * 0.5,
+      width: sizeOfWidth(0.9, context),
+      height: sizeOfHeight(0.5, context),
       child: Shimmer.fromColors(
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
@@ -31,8 +31,8 @@ class SetupSpecializationloading extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(340),
                       ),
-                      height: MediaQuery.sizeOf(context).height * 0.0009,
-                      width: MediaQuery.sizeOf(context).width * 0.2,
+                      height: sizeOfHeight(0.0009, context),
+                      width: sizeOfWidth(0.2, context),
                     ),
                   );
                 },
@@ -46,8 +46,8 @@ class SetupSpecializationloading extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Container(
-                      height: MediaQuery.sizeOf(context).height * 0.06,
-                      width: MediaQuery.sizeOf(context).width * 0.9,
+                      height: sizeOfHeight(0.06, context),
+                      width: sizeOfWidth(0.9, context),
                       color: Colors.white,
                     ),
                   );

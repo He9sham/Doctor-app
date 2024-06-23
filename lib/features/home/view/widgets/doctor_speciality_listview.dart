@@ -1,3 +1,4 @@
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:doctor/features/home/view/widgets/view_doctor_speciality.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ class DoctorSpecialityListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * 0.13,
+      height:sizeOfHeight(0.13, context),
       child: ListView.builder(
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,

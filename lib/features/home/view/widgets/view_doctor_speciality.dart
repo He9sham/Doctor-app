@@ -9,7 +9,7 @@ class ViewDoctorSpecialityItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * 0.15,
+      height: sizeOfHeight(0.15, context),
       width: 87.w,
       child: Column(
         children: [

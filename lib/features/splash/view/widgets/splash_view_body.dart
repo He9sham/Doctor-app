@@ -1,4 +1,5 @@
 import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/utils/route.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       children: [
         Image.asset(
           'assets/image/Logo.png',
-          height: MediaQuery.of(context).size.height * 0.5,
+          height: sizeOfHeight(0.5, context),
         ),
       ],
     );

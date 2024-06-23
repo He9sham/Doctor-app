@@ -27,7 +27,7 @@ class SighInView extends StatelessWidget {
                 verticalSpace(20),
                 TextAuthWelcome(
                   padding: EdgeInsets.only(
-                      right: MediaQuery.sizeOf(context).width * 0.4),
+                      right: sizeOfWidth(0.4, context),),
                   title: 'Welcome Back',
                   subtitle:
                       "We're excited to have you back, can't wait to see what you've been up to since you last logged in",

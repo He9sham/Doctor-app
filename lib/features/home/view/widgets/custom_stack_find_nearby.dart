@@ -11,15 +11,15 @@ class CustomStackFindNearby extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.sizeOf(context).width * 0.95,
-      height: MediaQuery.sizeOf(context).height * 0.26,
+      width: sizeOfWidth(0.95, context),
+      height: sizeOfHeight(0.26, context),
       child: Stack(
         children: [
           Positioned(
-            top: MediaQuery.sizeOf(context).height * 0.04,
+            top: sizeOfHeight(0.04, context),
             child: Container(
               width: 343.w,
-              height: MediaQuery.sizeOf(context).height * 0.21,
+              height: sizeOfHeight(0.21, context),
               decoration: BoxDecoration(
                 color: const Color(0xff247CFF),
                 borderRadius: BorderRadius.circular(24),
@@ -73,7 +73,7 @@ class CustomStackFindNearby extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: MediaQuery.sizeOf(context).width * 0.54,
+            left: sizeOfWidth(0.54, context),
             child: GestureDetector(
               onTap: () {
                 context.pushNamed(Routes.profileUserScreen);

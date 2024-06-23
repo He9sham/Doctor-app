@@ -1,3 +1,4 @@
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class CustomContainerTextView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.55,
+            height: sizeOfHeight(0.55, context),
           ),
           Text(
             title,

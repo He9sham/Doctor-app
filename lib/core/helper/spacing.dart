@@ -8,3 +8,11 @@ SizedBox verticalSpace(double height) => SizedBox(
 SizedBox horizontalSpace(double width) => SizedBox(
       width: width.w,
     );
+
+double sizeOfWidth(double width , BuildContext context) {
+ return MediaQuery.sizeOf(context).width *width;
+}
+
+double sizeOfHeight(double height , BuildContext context) {
+ return MediaQuery.sizeOf(context).height *height;
+}

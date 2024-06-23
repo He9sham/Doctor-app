@@ -9,13 +9,13 @@ class ViewDoctorSpecialityItemForDocSpeciView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * 0.100,
-      width: MediaQuery.sizeOf(context).width * 0.100,
+      height: sizeOfHeight(0.100, context),
+      width: sizeOfWidth(0.100, context),
       child: Column(
         children: [
           Container(
-            height: MediaQuery.sizeOf(context).height * 0.09,
-            width: MediaQuery.sizeOf(context).width * 0.20,
+            height: sizeOfHeight(0.09, context),
+            width: sizeOfWidth(0.20, context),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100), color: Colors.black,
               // color: const Color(0xffF5F5F5),
