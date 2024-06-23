@@ -24,7 +24,7 @@ class SighupView extends StatelessWidget {
                 verticalSpace(20),
                 TextAuthWelcome(
                   padding: EdgeInsets.only(
-                      right: MediaQuery.sizeOf(context).width * 0.36),
+                      right: sizeOfWidth(0.36, context),),
                   title: 'Create Account',
                   subtitle:
                       "Sign up now and start exploring all that our app has to offer. We're excited to welcome you to our community!",

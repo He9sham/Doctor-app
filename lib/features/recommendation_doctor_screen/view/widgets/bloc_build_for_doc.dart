@@ -1,3 +1,4 @@
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/logic/home_state.dart';
 import 'package:doctor/features/home/view/widgets/custom_list_view_doctor_item.dart';
@@ -56,8 +57,8 @@ class SetupSpecializationloadingForDocList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.sizeOf(context).width * 0.9,
-      height: MediaQuery.sizeOf(context).height * 0.7,
+      width: sizeOfWidth(0.9, context),
+      height: sizeOfHeight(0.7, context),
       child: Shimmer.fromColors(
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
@@ -69,8 +70,8 @@ class SetupSpecializationloadingForDocList extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Container(
-                      height: MediaQuery.sizeOf(context).height * 0.09,
-                      width: MediaQuery.sizeOf(context).width * 0.9,
+                      height: sizeOfHeight(0.09, context),
+                      width: sizeOfWidth(0.9, context),
                       color: Colors.white,
                     ),
                   );

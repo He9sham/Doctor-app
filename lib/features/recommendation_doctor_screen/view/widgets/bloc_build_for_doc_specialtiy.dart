@@ -1,3 +1,4 @@
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/logic/home_state.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/widgets/doctor_speciality_gridview.dart';
@@ -46,8 +47,8 @@ class SetupSpecializationloadingForDocSpecialitiy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.sizeOf(context).width * 0.9,
-      height: MediaQuery.sizeOf(context).height * 0.8,
+      width: sizeOfWidth(0.9, context),
+      height: sizeOfHeight(0.8, context),
       child: Shimmer.fromColors(
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
@@ -67,8 +68,8 @@ class SetupSpecializationloadingForDocSpecialitiy extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(340),
                       ),
-                      height: MediaQuery.sizeOf(context).height * 0.0009,
-                      width: MediaQuery.sizeOf(context).width * 0.2,
+                      height: sizeOfHeight(0.0009, context),
+                      width: sizeOfWidth(0.2, context),
                     ),
                   );
                 },

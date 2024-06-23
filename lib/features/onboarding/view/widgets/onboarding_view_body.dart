@@ -1,4 +1,5 @@
 import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/theming/color.dart';
 import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/onboarding/view/widgets/custom_container_text_view.dart';
@@ -11,7 +12,7 @@ class OnboardingViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.sizeOf(context).height * 0.5;
+    final height = sizeOfHeight(0.5, context);
     return OnBoardingSlider(
       // finishButtonText: 'Register',
       // onFinish: () {
