@@ -32,7 +32,8 @@ class ViewDetilsInformation extends StatelessWidget {
           thickness: 0.5,
         ),
         verticalSpace(30),
-        const ItemRow(
+         ItemRow(
+          onpressed: (){},
           photo: 'assets/image/Icon.png',
           title: 'Personal Information',
         ),
@@ -62,8 +63,9 @@ class ViewDetilsInformation extends StatelessWidget {
 }
 
 class ItemRow extends StatelessWidget {
-  const ItemRow({super.key, required this.photo, required this.title});
+  const ItemRow({super.key, required this.photo, required this.title, this.onpressed});
   final String photo, title;
+  final void Function()? onpressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -73,7 +75,7 @@ class ItemRow extends StatelessWidget {
           Image.asset(photo),
           horizontalSpace(9),
           TextButton(
-            onPressed: () {},
+            onPressed: onpressed ,
             child: Text(
               title,
               style: const TextStyle(
