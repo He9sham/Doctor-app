@@ -1,6 +1,7 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:doctor/core/helper/awesome_widgets.dart';
 import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/notification_service/local_notification_service.dart';
 import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/logic/login_state.dart';
@@ -27,9 +28,13 @@ class LoginBlocListener extends StatelessWidget {
               },
             );
           },
-          success: (loginResponse) {
+          success: (loginResponse) async {
             context.pop(); // Close the dialog
-            context.pushNamed(Routes.homeScreen, arguments:loginResponse); // Navigate to home screen
+            context.pushNamed(Routes.homeScreen,
+                arguments: loginResponse); // Navigate to home screen
+            NotificationService notificationService = NotificationService();
+            await notificationService.showInstantNotification(
+                2, 'Welcome back', 'How are you today');
           },
           error: (error) {
             context.pop(); // Close the dialog

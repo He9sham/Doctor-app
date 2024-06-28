@@ -2,6 +2,7 @@ import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/core/helper/constans.dart';
 import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/shared_pref_helper.dart';
+import 'package:doctor/core/notification_service/local_notification_service.dart';
 import 'package:doctor/core/utils/app_router.dart';
 import 'package:doctor/docapp.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,8 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   setupGetIt();
   await checkIfLoggedInUser();
+  NotificationService services = NotificationService();
+  await services.init();
   runApp(DoctorApp(
     appRouter: AppRouter(),
   ));
@@ -21,8 +24,8 @@ checkIfLoggedInUser() async {
   String? userToken =
       await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
   if (!userToken.isNullOrEmpty()) {
-    isLoggedInUser = true;
+    isLoggedInUser == true;
   } else {
-    isLoggedInUser = false;
+    isLoggedInUser == false;
   }
 }
