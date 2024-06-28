@@ -5,6 +5,8 @@ import 'package:doctor/features/home/data/apis/home_screen_api.dart';
 import 'package:doctor/features/home/data/repos/home_repo.dart';
 import 'package:doctor/features/login/data/repo/login_repo.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
+import 'package:doctor/features/profile_user/data/api/profile_user_api.dart';
+import 'package:doctor/features/profile_user/data/repo/profile_repo.dart';
 import 'package:doctor/features/sign_up/data/repo/sign_up_repo.dart';
 import 'package:doctor/features/sign_up/view_models/signup_cubit/sign_up_cubit.dart';
 import 'package:get_it/get_it.dart';
@@ -27,4 +29,8 @@ Future<void> setupGetIt() async {
   // home
   getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
   getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+
+  // Profile
+  getIt.registerLazySingleton<ProfileUserApi>(() => ProfileUserApi(dio));
+  getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
 }

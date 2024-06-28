@@ -1,5 +1,4 @@
-
-import 'package:doctor/features/profile_user/view/widgets/view_detils_information.dart';
+import 'package:doctor/features/profile_user/view/widgets/bloc_builder_for_profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helper/spacing.dart';
@@ -26,7 +25,7 @@ class ShowInformationUser extends StatelessWidget {
                   topLeft: Radius.circular(40),
                 ),
               ),
-              child: const ViewDetilsInformation(),
+              child: const BlocBuilderForProfile(),
             ),
           ),
           Positioned(

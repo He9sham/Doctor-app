@@ -7,6 +7,7 @@ import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/sigh_in_view.dart';
 import 'package:doctor/features/onboarding/view/onboarding_view.dart';
+import 'package:doctor/features/profile_user/logic/profile_user_cubit.dart';
 import 'package:doctor/features/profile_user/view/profile_view.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/doctor_speciality.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/recommend_doc_view.dart';
@@ -53,8 +54,8 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => HomeCubit(getIt())..onGetSpecialization(),
-            child:  HomePage(
-              loginResponse: loginResponse as LoginResponse ,
+            child: HomePage(
+              loginResponse: loginResponse as LoginResponse,
             ),
           ),
         );
@@ -72,9 +73,12 @@ class AppRouter {
             child: const DoctorSpeciality(),
           ),
         );
-        case Routes.profileUserScreen:
+      case Routes.profileUserScreen:
         return MaterialPageRoute(
-          builder: (_) => const ProfileView(),
+          builder: (_) => BlocProvider(
+            create: (context) => ProfileUserCubit(getIt())..getProfileUser(),
+            child: const ProfileView(),
+          ),
         );
       default:
         return null;
