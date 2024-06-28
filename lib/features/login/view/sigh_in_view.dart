@@ -6,12 +6,12 @@ import 'package:doctor/core/widgets/app_text_button.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/widgets/email_and_password.dart';
 import 'package:doctor/features/login/view/widgets/login_bloc_listener.dart';
+import 'package:doctor/features/login/view/widgets/row_icon_auth.dart';
 import 'package:doctor/features/login/view/widgets/row_text_have_acc.dart';
 import 'package:doctor/features/login/view/widgets/terms_conditions_text.dart';
 import 'package:doctor/features/login/view/widgets/text_auth_welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 class SighInView extends StatelessWidget {
   const SighInView({super.key});
@@ -27,7 +27,8 @@ class SighInView extends StatelessWidget {
                 verticalSpace(20),
                 TextAuthWelcome(
                   padding: EdgeInsets.only(
-                      right: sizeOfWidth(0.4, context),),
+                    right: sizeOfWidth(0.4, context),
+                  ),
                   title: 'Welcome Back',
                   subtitle:
                       "We're excited to have you back, can't wait to see what you've been up to since you last logged in",
@@ -63,9 +64,11 @@ class SighInView extends StatelessWidget {
                     validateThenDoLogin(context);
                   },
                 ),
-                verticalSpace(16),
+                verticalSpace(25),
+                const RowIconAuth(),
+                verticalSpace(20),
                 const TermsConditionsText(),
-                verticalSpace(60),
+                verticalSpace(20),
                 RowTextHaveAcc(
                   title: 'Don\'t have an account?',
                   suptitle: 'Sign up',

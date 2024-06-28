@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/helper/spacing.dart';
+import '../../data/models/profile_user_response.dart';
 
 class ViewDetilsInformation extends StatelessWidget {
-  const ViewDetilsInformation({super.key});
-
+  const ViewDetilsInformation({super.key, required this.data});
+  final ProfileUserResponseData data;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         verticalSpace(99),
-        const Text(
-          'Hesham hemdan',
-          style: TextStyle(
+         Text(
+          data.name!,
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 20,
           ),
         ),
         verticalSpace(10),
         Text(
-          'heshamhamdan51@gmail.com',
+          data.email!,
           style: TextStyle(
             color: Colors.black.withOpacity(0.6),
             fontSize: 14,
