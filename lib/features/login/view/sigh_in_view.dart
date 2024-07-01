@@ -65,6 +65,9 @@ class SighInView extends StatelessWidget {
                   },
                 ),
                 verticalSpace(25),
+                const Divider(
+                  thickness: 1,
+                ),
                 const RowIconAuth(),
                 verticalSpace(20),
                 const TermsConditionsText(),

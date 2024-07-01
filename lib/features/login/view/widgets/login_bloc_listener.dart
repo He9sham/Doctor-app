@@ -1,12 +1,13 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:doctor/core/helper/awesome_widgets.dart';
 import 'package:doctor/core/helper/extensions.dart';
-import 'package:doctor/core/notification_service/local_notification_service.dart';
 import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/logic/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/notification_service/notifucation_assest.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -30,11 +31,9 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (loginResponse) async {
             context.pop(); // Close the dialog
-            context.pushNamed(Routes.homeScreen,
-                arguments: loginResponse); // Navigate to home screen
-            NotificationService notificationService = NotificationService();
-            await notificationService.showInstantNotification(
-                2, 'Welcome back', 'How are you today');
+            context.pushNamed(Routes.homeScreen, arguments: loginResponse);
+            NotifucationAssest.setNotification(
+                title: 'Welcome back', body: 'How are you today?', id: 2);
           },
           error: (error) {
             context.pop(); // Close the dialog
