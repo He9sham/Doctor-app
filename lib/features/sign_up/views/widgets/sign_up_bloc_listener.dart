@@ -2,8 +2,8 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:doctor/core/helper/awesome_widgets.dart';
 import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/utils/route.dart';
-import 'package:doctor/features/sign_up/view_models/signup_cubit/sign_up_cubit.dart';
-import 'package:doctor/features/sign_up/view_models/signup_cubit/sign_up_state.dart';
+import 'package:doctor/features/sign_up/logic/sign_up_cubit.dart';
+import 'package:doctor/features/sign_up/logic/sign_up_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
