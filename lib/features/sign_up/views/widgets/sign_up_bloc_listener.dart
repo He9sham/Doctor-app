@@ -32,9 +32,9 @@ class SignUpBlocListener extends StatelessWidget {
             awesomeWidgets(context, DialogType.error, 'Error',
                 'The email has already Created');
           },
-          signupSuccess: (loginResposn) {
+          signupSuccess: (signupResponse) {
             context.pop();
-            context.pushNamed(Routes.welcomeScreen);
+            context.pushNamed(Routes.homeScreen);
           },
         );
       },
