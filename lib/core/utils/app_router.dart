@@ -6,7 +6,6 @@ import 'package:doctor/features/home/view/welcome_page.dart';
 import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/sigh_in_view.dart';
-import 'package:doctor/features/navigation_appbar_controlor.dart';
 import 'package:doctor/features/onboarding/view/onboarding_view.dart';
 import 'package:doctor/features/profile_user/logic/profile_user_cubit.dart';
 import 'package:doctor/features/profile_user/view/profile_view.dart';
@@ -21,7 +20,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
-    // final arguments = settings.arguments;
+    final arguments = settings.arguments;
 
     switch (settings.name) {
       case Routes.splashScreen:
@@ -50,10 +49,10 @@ class AppRouter {
             child: const SighupView(),
           ),
         );
-      case Routes.navigationScreen:
-        return MaterialPageRoute(
-          builder: (_) => const NavigationBarView(),
-        );
+      // case Routes.navigationScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const NavigationBarView(),
+      //   );
       case Routes.homeScreen:
         final loginResponse = arguments;
         return MaterialPageRoute(
