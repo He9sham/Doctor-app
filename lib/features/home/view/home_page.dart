@@ -11,8 +11,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key, required this.loginResponse});
-    final LoginResponse loginResponse;
+  const HomePage(
+      {super.key, required this.loginResponse});
+  final LoginResponse loginResponse;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     verticalSpace(15),
-                     CustomAppbar(
+                    CustomAppbar(
                       loginResponse: loginResponse,
                     ),
                     const CustomStackFindNearby(),

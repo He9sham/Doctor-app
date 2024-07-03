@@ -8,12 +8,13 @@ class CustomAppbar extends StatelessWidget {
   final LoginResponse loginResponse;
   @override
   Widget build(BuildContext context) {
+
     return Row(
       children: [
         Column(
           children: [
             Text(
-              'Hi, ${loginResponse.userData!.userName!}!',
+              'Hi, ${loginResponse.userData!.userName}!',
               style: Styles.textmid,
             ),
             Text(

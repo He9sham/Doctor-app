@@ -25,11 +25,11 @@ class LoginBlocListener extends StatelessWidget {
               builder: (context) {
                 return const Center(
                   child: CircularProgressIndicator(),
-                ); // Or any other placeholder widget
+                ); // Replace with your loading widget
               },
             );
           },
-          success: (loginResponse) async {
+          success: (loginResponse)  {
             context.pop(); // Close the dialog
             context.pushNamed(Routes.homeScreen, arguments: loginResponse);
             NotifucationAssest.setNotification(
