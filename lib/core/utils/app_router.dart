@@ -1,5 +1,6 @@
 import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/core/utils/route.dart';
+import 'package:doctor/features/doc_details/view/doc_details_view.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/view/home_page.dart';
 import 'package:doctor/features/home/view/welcome_page.dart';
@@ -79,6 +80,10 @@ class AppRouter {
             create: (context) => ProfileUserCubit(getIt())..getProfileUser(),
             child: const ProfileView(),
           ),
+        );
+      case Routes.docDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const DocDetailsView(),
         );
       default:
         return null;
