@@ -1,6 +1,7 @@
 import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/doc_details/view/doc_details_view.dart';
+import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/view/home_page.dart';
 import 'package:doctor/features/home/view/welcome_page.dart';
@@ -86,8 +87,11 @@ class AppRouter {
           ),
         );
       case Routes.docDetailsScreen:
+        final docId = arguments;
         return MaterialPageRoute(
-          builder: (_) => const DocDetailsView(),
+          builder: (_) =>  DocDetailsView(
+            doctors: docId as Doctors,
+          ),
         );
       default:
         return null;

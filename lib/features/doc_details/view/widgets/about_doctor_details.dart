@@ -1,24 +1,29 @@
-
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/theming/styles.dart';
+import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:flutter/material.dart';
 
 class AboutDoctorDetails extends StatelessWidget {
-  const AboutDoctorDetails({super.key});
-
+  const AboutDoctorDetails({super.key, required this.doctors});
+  final Doctors doctors;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          ' Address',
+          'Address',
           style: Styles.textmid,
         ),
         verticalSpace(12),
-        const Text(
-          ' 258 Tiffany View Suite 262 Port Alyceland, ND 16329-8282',
-          style: Styles.textsmail,
+        SizedBox(
+          width: double.infinity,
+          child: Text(
+            doctors.address ??
+                '258 Tiffany View Suite 262 Portalyceland, ND 16329-8282',
+            style: Styles.textsmail,
+            overflow: TextOverflow.fade,
+          ),
         ),
         verticalSpace(24),
         const Text(
@@ -26,8 +31,8 @@ class AboutDoctorDetails extends StatelessWidget {
           style: Styles.textmid,
         ),
         verticalSpace(12),
-        const Text(
-          ' Monday - Friday, 08.00 AM - 20.00 PM',
+        Text(
+          ' Monday - Friday, ${doctors.startTime} - ${doctors.endTime}',
           style: Styles.textsmail,
         ),
         verticalSpace(24),
@@ -36,8 +41,8 @@ class AboutDoctorDetails extends StatelessWidget {
           style: Styles.textmid,
         ),
         verticalSpace(12),
-        const Text(
-          ' General | RSUD Gatot Subroto',
+        Text(
+          ' ${doctors.phone}',
           style: Styles.textsmail,
         ),
         verticalSpace(24),

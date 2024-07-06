@@ -1,13 +1,14 @@
 
 import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theming/styles.dart';
 
 class CustomAppbarForDocDetails extends StatelessWidget {
-  const CustomAppbarForDocDetails({super.key});
-
+  const CustomAppbarForDocDetails({super.key, required this.doctors});
+  final Doctors doctors;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -29,8 +30,8 @@ class CustomAppbarForDocDetails extends StatelessWidget {
           ),
         ),
         horizontalSpace(60),
-        const Text(
-          'Dr Randy Wigham',
+         Text(
+          doctors.name!,
           style: Styles.textmid,
         ),
       ],

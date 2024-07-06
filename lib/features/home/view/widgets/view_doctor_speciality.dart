@@ -25,12 +25,13 @@ class ViewDoctorSpecialityItem extends StatelessWidget {
             ),
           ),
           verticalSpace(5),
-           Text(
+          Text(
             data.name ?? 'Health',
             style: const TextStyle(
-              fontSize: 12,
+              fontSize: 11,
               fontWeight: FontWeight.w400,
             ),
+            maxLines: 1,
           ),
         ],
       ),
