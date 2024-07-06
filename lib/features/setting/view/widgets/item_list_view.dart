@@ -1,5 +1,6 @@
-
+import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/spacing.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/features/setting/view/widgets/item_setting_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,9 +12,14 @@ class ItemListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const ItemSettingView(
-          icon: FontAwesomeIcons.bell,
-          title: 'Notification',
+        GestureDetector(
+          onTap: () {
+            context.pushNamed(Routes.notificationScreen);
+          },
+          child: const ItemSettingView(
+            icon: FontAwesomeIcons.bell,
+            title: 'Notification',
+          ),
         ),
         const Divider(
           endIndent: 17,

@@ -1,11 +1,11 @@
-
 import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppbarSetting extends StatelessWidget {
-  const CustomAppbarSetting({super.key});
-
+  const CustomAppbarSetting({super.key, required this.title, required this.width});
+  final String title;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,10 +20,10 @@ class CustomAppbarSetting extends StatelessWidget {
           },
           color: Colors.black,
         ),
-        horizontalSpace(95),
-        const Text(
-          'Setting',
-          style: TextStyle(
+        horizontalSpace(width),
+        Text(
+          title,
+          style: const TextStyle(
             fontSize: 18,
             color: Colors.black,
           ),

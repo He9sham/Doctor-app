@@ -1,11 +1,10 @@
+import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/features/setting/view/widgets/custom_appbar_setting.dart';
-import 'package:doctor/features/setting/view/widgets/item_list_view.dart';
+import 'package:doctor/features/setting/view/widgets/notification_item_list.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/helper/spacing.dart';
-
-class SettingView extends StatelessWidget {
-  const SettingView({super.key});
+class NotificationView extends StatelessWidget {
+  const NotificationView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +14,11 @@ class SettingView extends StatelessWidget {
           child: Column(
             children: [
               const CustomAppbarSetting(
-                width: 95,
-                title: 'Settings',
+                title: 'Notification',
+                width: 80,
               ),
               verticalSpace(35),
-              const ItemListView(),
+              const NotificationItemList()
             ],
           ),
         ),
