@@ -35,9 +35,14 @@ class ItemListView extends StatelessWidget {
           indent: 17,
         ),
         verticalSpace(28),
-        const ItemSettingView(
-          icon: FontAwesomeIcons.lock,
-          title: 'Security',
+        GestureDetector(
+          onTap: () {
+            context.pushNamed(Routes.securityScreen);
+          },
+          child: const ItemSettingView(
+            icon: FontAwesomeIcons.lock,
+            title: 'Security',
+          ),
         ),
         const Divider(
           endIndent: 17,

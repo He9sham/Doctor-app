@@ -1,3 +1,6 @@
+import 'package:doctor/core/helper/spacing.dart';
+import 'package:doctor/features/setting/view/widgets/custom_appbar_setting.dart';
+import 'package:doctor/features/setting/view/widgets/list_view_security.dart';
 import 'package:flutter/material.dart';
 
 class SecurityView extends StatelessWidget {
@@ -5,13 +8,17 @@ class SecurityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SecurityView'),
-      ),
-      body: Column(
-        children: [
-          Container(),
-        ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              const CustomAppbarSetting(title: 'Security', width: 90),
+              verticalSpace(40),
+              const ListViewSecurity(),
+            ],
+          ),
+        ),
       ),
     );
   }
