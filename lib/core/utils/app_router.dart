@@ -13,6 +13,7 @@ import 'package:doctor/features/profile_user/logic/profile_user_cubit.dart';
 import 'package:doctor/features/profile_user/view/profile_view.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/doctor_speciality.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/recommend_doc_view.dart';
+import 'package:doctor/features/setting/view/setting_view.dart';
 import 'package:doctor/features/sign_up/logic/sign_up_cubit.dart';
 import 'package:doctor/features/sign_up/views/sighup_view.dart';
 import 'package:doctor/features/splash/view/splash_view.dart';
@@ -28,6 +29,10 @@ class AppRouter {
       case Routes.splashScreen:
         return MaterialPageRoute(
           builder: (_) => const SplashView(),
+        );
+      case Routes.settingScreen:
+        return MaterialPageRoute(
+          builder: (_) => const SettingView(),
         );
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
@@ -85,10 +90,11 @@ class AppRouter {
       case Routes.docDetailsScreen:
         final docId = arguments;
         return MaterialPageRoute(
-          builder: (_) =>  DocDetailsView(
+          builder: (_) => DocDetailsView(
             doctors: docId as Doctors,
           ),
         );
+
       default:
         return null;
     }

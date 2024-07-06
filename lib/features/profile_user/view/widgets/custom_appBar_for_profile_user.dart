@@ -1,4 +1,5 @@
 import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helper/spacing.dart';
@@ -31,7 +32,9 @@ class CustomAppBarforProfileUser extends StatelessWidget {
         horizontalSpace(108),
         IconButton(
           icon: const Icon(Icons.settings),
-          onPressed: () {},
+          onPressed: () {
+            context.pushNamed(Routes.settingScreen);
+          },
           color: Colors.white,
         ),
       ],
