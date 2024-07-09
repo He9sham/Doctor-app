@@ -1,11 +1,11 @@
 class Routes {
+  static const String navigationbarScreen = '/navigationbarScreen';
   static const String securityScreen = '/securityScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String settingScreen = '/settingScreen';
   static const String docDetailsScreen = '/docDetailsScreen';
   static const String profileUserScreen = '/profileUserScreen';
-  static const String doctorSpecializationScreen =
-      '/doctorSpecializationScreen';
+  static const String doctorSpecializationScreen = '/doctorSpecializationScreen';
   static const String recommendationScreen = '/recommendationScreen';
   static const String welcomeScreen = '/welcomeScreen';
   static const String splashScreen = '/splashScreen';

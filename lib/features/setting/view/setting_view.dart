@@ -11,7 +11,7 @@ class SettingView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
           child: Column(
             children: [
               const CustomAppbarSetting(

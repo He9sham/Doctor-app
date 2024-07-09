@@ -1,11 +1,10 @@
 import 'package:doctor/core/theming/styles.dart';
-import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({super.key, required this.loginResponse});
-  final LoginResponse loginResponse;
+  const CustomAppbar({super.key});
+  // final LoginResponse loginResponse;
   @override
   Widget build(BuildContext context) {
 
@@ -13,8 +12,8 @@ class CustomAppbar extends StatelessWidget {
       children: [
         Column(
           children: [
-            Text(
-              'Hi, ${loginResponse.userData!.userName}!',
+           const Text(
+              'Hi, ${'Hesham'}!',
               style: Styles.textmid,
             ),
             Text(
