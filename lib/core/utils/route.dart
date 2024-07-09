@@ -1,4 +1,5 @@
 class Routes {
+  static const String personInformationScreen = '/personInformationScreen';
   static const String navigationbarScreen = '/navigationbarScreen';
   static const String securityScreen = '/securityScreen';
   static const String notificationScreen = '/notificationScreen';

@@ -7,12 +7,11 @@ class CustomAppbar extends StatelessWidget {
   // final LoginResponse loginResponse;
   @override
   Widget build(BuildContext context) {
-
     return Row(
       children: [
         Column(
           children: [
-           const Text(
+            const Text(
               'Hi, ${'Hesham'}!',
               style: Styles.textmid,
             ),

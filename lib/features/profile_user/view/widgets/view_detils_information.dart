@@ -1,3 +1,5 @@
+import 'package:doctor/core/helper/extensions.dart';
+import 'package:doctor/core/utils/route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helper/spacing.dart';
@@ -11,7 +13,7 @@ class ViewDetilsInformation extends StatelessWidget {
     return Column(
       children: [
         verticalSpace(99),
-         Text(
+        Text(
           data.name!,
           style: const TextStyle(
             color: Colors.black,
@@ -33,8 +35,10 @@ class ViewDetilsInformation extends StatelessWidget {
           thickness: 0.5,
         ),
         verticalSpace(30),
-         ItemRow(
-          onpressed: (){},
+        ItemRow(
+          onpressed: () {
+            context.pushNamed(Routes.personInformationScreen, arguments: data);
+          },
           photo: 'assets/image/Icon.png',
           title: 'Personal Information',
         ),
@@ -64,7 +68,8 @@ class ViewDetilsInformation extends StatelessWidget {
 }
 
 class ItemRow extends StatelessWidget {
-  const ItemRow({super.key, required this.photo, required this.title, this.onpressed});
+  const ItemRow(
+      {super.key, required this.photo, required this.title, this.onpressed});
   final String photo, title;
   final void Function()? onpressed;
   @override
@@ -76,7 +81,7 @@ class ItemRow extends StatelessWidget {
           Image.asset(photo),
           horizontalSpace(9),
           TextButton(
-            onPressed: onpressed ,
+            onPressed: onpressed,
             child: Text(
               title,
               style: const TextStyle(
