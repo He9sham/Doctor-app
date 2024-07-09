@@ -26,9 +26,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     verticalSpace(15),
-                    const CustomAppbar(
-                        // loginResponse: loginResponse,
-                        ),
+                    const CustomAppbar(),
                     const CustomStackFindNearby(),
                     verticalSpace(5),
                     RowShowTextTitle(

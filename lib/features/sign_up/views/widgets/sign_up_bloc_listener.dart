@@ -34,7 +34,7 @@ class SignUpBlocListener extends StatelessWidget {
           },
           signupSuccess: (signupResponse) {
             context.pop();
-            context.pushNamed(Routes.homeScreen);
+            context.pushNamed(Routes.navigationbarScreen);
           },
         );
       },

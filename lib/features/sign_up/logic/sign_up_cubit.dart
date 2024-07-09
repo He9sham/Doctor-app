@@ -8,6 +8,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import '../../../core/helper/constans.dart';
+import '../../../core/helper/shared_pref_helper.dart';
+import '../../../core/networking/dio_factory.dart';
 
 class SignupCubit extends Cubit<SignupState> {
   final SignupRepo _signupRepo;
@@ -20,7 +23,11 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController passwordConfirmationController =
       TextEditingController();
   final formKey = GlobalKey<FormState>();
-
+     /// save token for user function
+  Future<void> saveToken(String token) async {
+    await SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
+    DioFactory.saveTokenafterLogin(token);
+  }
   void emitSignupStates() async {
     emit(const SignupState.signupLoading());
     final response = await _signupRepo.signup(
@@ -33,7 +40,8 @@ class SignupCubit extends Cubit<SignupState> {
         gender: 0,
       ),
     );
-    response.when(success: (signupResponse) {
+    response.when(success: (signupResponse) async {
+      await saveToken(signupResponse.userData?.token ?? "");
       emit(SignupState.signupSuccess(signupResponse));
     }, failure: (error) {
       emit(SignupState.signupError(error: error.apiErrorModel.message ?? ''));

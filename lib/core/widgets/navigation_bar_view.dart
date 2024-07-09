@@ -18,7 +18,7 @@ class NavigationBarView extends StatelessWidget {
         providers: [
             BlocProvider(
             create: (context) => HomeCubit(getIt())..onGetSpecialization(),
-            child: HomePage(
+            child: const HomePage(
               // loginResponse: loginResponse as LoginResponse,
             ),
           ),
