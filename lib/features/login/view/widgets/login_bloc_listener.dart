@@ -31,7 +31,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (loginResponse)  {
             context.pop(); // Close the dialog
-            context.pushNamed(Routes.homeScreen, arguments: loginResponse);
+            context.pushNamed(Routes.navigationbarScreen, arguments: loginResponse);
             NotifucationAssest.setNotification(
                 title: 'Welcome back', body: 'How are you today?', id: 2);
           },

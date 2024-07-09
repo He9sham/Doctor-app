@@ -12,7 +12,7 @@ class ProfileView extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            verticalSpace(20),
+            verticalSpace(30),
             const CustomAppBarforProfileUser(),
             verticalSpace(60),
             const ShowInformationUser(),

@@ -6,14 +6,12 @@ import 'package:doctor/features/home/view/widgets/custom_appbar.dart';
 import 'package:doctor/features/home/view/widgets/custom_bloc_builder_for_specialization_doctor.dart';
 import 'package:doctor/features/home/view/widgets/custom_stack_find_nearby.dart';
 import 'package:doctor/features/home/view/widgets/row_show_text_title.dart';
-import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage(
-      {super.key, required this.loginResponse});
-  final LoginResponse loginResponse;
+  const HomePage({super.key});
+  // final LoginResponse loginResponse;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,17 +20,17 @@ class HomePage extends StatelessWidget {
           onRefresh: () => refreshData(context),
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: SizedBox(
                 height: MediaQuery.sizeOf(context).height,
                 child: Column(
                   children: [
                     verticalSpace(15),
-                    CustomAppbar(
-                      loginResponse: loginResponse,
-                    ),
+                    const CustomAppbar(
+                        // loginResponse: loginResponse,
+                        ),
                     const CustomStackFindNearby(),
-                    verticalSpace(11),
+                    verticalSpace(5),
                     RowShowTextTitle(
                       onPressed: () {
                         context.pushNamed(Routes.doctorSpecializationScreen);

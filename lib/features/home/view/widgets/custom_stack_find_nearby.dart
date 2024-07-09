@@ -1,7 +1,5 @@
-import 'package:doctor/core/helper/extensions.dart';
 import 'package:doctor/core/helper/shared_pref_helper.dart';
 import 'package:doctor/core/helper/spacing.dart';
-import 'package:doctor/core/utils/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -74,12 +72,7 @@ class CustomStackFindNearby extends StatelessWidget {
           ),
           Positioned(
             left: sizeOfWidth(0.54, context),
-            child: GestureDetector(
-              onTap: () {
-                context.pushNamed(Routes.profileUserScreen);
-              },
-              child: Image.asset('assets/image/Image.png'),
-            ),
+            child: Image.asset('assets/image/Image.png'),
           )
         ],
       ),
