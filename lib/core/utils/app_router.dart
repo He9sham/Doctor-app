@@ -9,7 +9,9 @@ import 'package:doctor/features/home/view/welcome_page.dart';
 import 'package:doctor/features/login/logic/login_cubit.dart';
 import 'package:doctor/features/login/view/sigh_in_view.dart';
 import 'package:doctor/features/onboarding/view/onboarding_view.dart';
+import 'package:doctor/features/profile_user/data/models/profile_user_response.dart';
 import 'package:doctor/features/profile_user/logic/profile_user_cubit.dart';
+import 'package:doctor/features/profile_user/view/person_information.dart';
 import 'package:doctor/features/profile_user/view/profile_view.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/doctor_speciality.dart';
 import 'package:doctor/features/recommendation_doctor_screen/view/recommend_doc_view.dart';
@@ -35,6 +37,13 @@ class AppRouter {
       case Routes.settingScreen:
         return MaterialPageRoute(
           builder: (_) => const SettingView(),
+        );
+         case Routes.personInformationScreen:
+         final profileUserResponseData = arguments;
+        return MaterialPageRoute(
+          builder: (_) =>  PersonInformation(
+            profileUserResponseData: profileUserResponseData as ProfileUserResponseData,
+          ),
         );
       case Routes.navigationbarScreen:
         return MaterialPageRoute(
