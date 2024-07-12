@@ -37,7 +37,7 @@ class AboutDoctorDetails extends StatelessWidget {
         ),
         verticalSpace(24),
         const Text(
-          'Specialties',
+          'Phone',
           style: Styles.textmid,
         ),
         verticalSpace(12),
@@ -47,13 +47,11 @@ class AboutDoctorDetails extends StatelessWidget {
         ),
         verticalSpace(24),
         const Text(
-          'About me',
+          'price',
           style: Styles.textmid,
         ),
         verticalSpace(12),
-        const Text(
-          'Dr. Perry is a highly skilled and experienced treating...',
-        )
+        Text('${doctors.price.toString()}' r' $')
       ],
     );
   }

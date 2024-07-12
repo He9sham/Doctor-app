@@ -56,14 +56,14 @@ android {
     }
      flavorDimensions "default"
     productFlavors {
-      production {
-          dimension "default"
-          resValue "string", "app_name", "My Doctor Production"
-      }
       development {
           dimension "default"
           applicationIdSuffix ".dev"
           resValue "string", "app_name", "My Doctor Development"
+      }
+      production {
+          dimension "default"
+          resValue "string", "app_name", "My Doctor Production"
       }
   }
 
