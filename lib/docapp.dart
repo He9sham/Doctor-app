@@ -12,7 +12,7 @@ class DoctorApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       child: MaterialApp(
-        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
         debugShowCheckedModeBanner: false,
       ),

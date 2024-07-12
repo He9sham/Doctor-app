@@ -1,9 +1,12 @@
 import 'package:doctor/core/helper/spacing.dart';
 import 'package:doctor/core/widgets/app_text_button.dart';
-import 'package:doctor/core/widgets/app_text_form_field.dart';
 import 'package:doctor/features/profile_user/data/models/profile_user_response.dart';
+import 'package:doctor/features/profile_user/logic/update_profile_cubit/update_profile_cubit.dart';
+import 'package:doctor/features/profile_user/view/widgets/bloc_listener_for_update_profile.dart';
+import 'package:doctor/features/profile_user/view/widgets/text_form_update_profile.dart';
 import 'package:doctor/features/setting/view/widgets/custom_appbar_setting.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PersonInformation extends StatelessWidget {
   const PersonInformation({super.key, required this.profileUserResponseData});
@@ -22,25 +25,8 @@ class PersonInformation extends StatelessWidget {
                 verticalSpace(48),
                 Image.asset('assets/image/Avatar.png'),
                 verticalSpace(51),
-                AppTextFormField(
-                  hintText: '${profileUserResponseData.name}',
-                  validator: (data) {},
-                ),
-                verticalSpace(16),
-                AppTextFormField(
-                  hintText: '${profileUserResponseData.email}',
-                  validator: (data) {},
-                ),
-                verticalSpace(16),
-                AppTextFormField(
-                  hintText: 'password',
-                  validator: (data) {},
-                ),
-                verticalSpace(16),
-                AppTextFormField(
-                  keyboardType: TextInputType.phone,
-                  validator: (data) {},
-                  hintText: '${profileUserResponseData.phone}',
+                TextFormUpdateProfile(
+                  profileUserResponseData: profileUserResponseData,
                 ),
                 verticalSpace(24),
                 const Text(
@@ -52,18 +38,27 @@ class PersonInformation extends StatelessWidget {
                 verticalSpace(70),
                 AppTextButton(
                   buttonText: 'Save',
-                  onPressed: () {},
+                  onPressed: () {
+                    validateThenDoUpdateProfile(context);
+                  },
                   textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
-                )
+                ),
+                const BlocListenerForUpdateProfile(),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  void validateThenDoUpdateProfile(BuildContext context) {
+    if (context.read<UpdateProfileCubit>().formKey.currentState!.validate()) {
+      context.read<UpdateProfileCubit>().emitUpdateProfile();
+    }
   }
 }

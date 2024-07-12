@@ -2,7 +2,7 @@ import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/view/home_page.dart';
 import 'package:doctor/features/home/view/widgets/navigate_bar.dart';
-import 'package:doctor/features/profile_user/logic/profile_user_cubit.dart';
+import 'package:doctor/features/profile_user/logic/profile_user_cubit/profile_user_cubit.dart';
 import 'package:doctor/features/profile_user/view/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

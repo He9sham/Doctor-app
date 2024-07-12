@@ -11,8 +11,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
-  setupGetIt();
   await checkIfLoggedInUser();
+  await setupGetIt();
   NotificationService services = NotificationService();
   await services.init();
   runApp(DoctorApp(

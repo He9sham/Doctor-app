@@ -1,5 +1,5 @@
-import 'package:doctor/features/profile_user/logic/profile_user_cubit.dart';
-import 'package:doctor/features/profile_user/logic/profile_user_state.dart';
+import 'package:doctor/features/profile_user/logic/profile_user_cubit/profile_user_cubit.dart';
+import 'package:doctor/features/profile_user/logic/profile_user_cubit/profile_user_state.dart';
 import 'package:doctor/features/profile_user/view/widgets/view_detils_information.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
