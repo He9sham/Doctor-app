@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'update_profile_request.g.dart';
+
 @JsonSerializable()
 class UpdateProfileRequest {
   final String name;
@@ -15,6 +16,6 @@ class UpdateProfileRequest {
     required this.password,
     required this.gender,
   });
-  
+
   Map<String, dynamic> toJson() => _$UpdateProfileRequestToJson(this);
 }

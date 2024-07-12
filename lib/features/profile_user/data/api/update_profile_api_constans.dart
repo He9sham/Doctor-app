@@ -1,4 +1,3 @@
-class UpdateProfileApiConstans 
-{
-  static const String updateProfileApi = "user/update";
+class UpdateProfileApiConstans {
+  static const String updateProfileApi = "/user/update";
 }

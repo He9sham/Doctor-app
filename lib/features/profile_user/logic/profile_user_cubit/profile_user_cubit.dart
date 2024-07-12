@@ -1,5 +1,5 @@
 import 'package:doctor/features/profile_user/data/repo/profile_repo.dart';
-import 'package:doctor/features/profile_user/logic/profile_user_state.dart';
+import 'package:doctor/features/profile_user/logic/profile_user_cubit/profile_user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProfileUserCubit extends Cubit<ProfileUserState> {
