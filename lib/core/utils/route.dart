@@ -1,4 +1,5 @@
 class Routes {
+  static const String chataiScreen = '/chataiScreenScreen';
   static const String personInformationScreen = '/personInformationScreen';
   static const String navigationbarScreen = '/navigationbarScreen';
   static const String securityScreen = '/securityScreen';

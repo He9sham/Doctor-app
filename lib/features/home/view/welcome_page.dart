@@ -15,8 +15,8 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
-      context.pushNamed(Routes.homeScreen);
+    Future.delayed(const Duration(seconds: 3), () {
+      context.pushNamed(Routes.chataiScreen);
     });
   }
 
@@ -30,22 +30,14 @@ class _WelcomePageState extends State<WelcomePage> {
             child: CustomContanierWelcome(),
           ),
           Text(
-            'Congratulations',
+            'Hi there !',
             style: TextStyle(
                 fontSize: 40,
                 color: const Color(0xff233B55),
                 fontFamily: GoogleFonts.poppins().fontFamily),
           ),
           Text(
-            'Your Registration Is Success',
-            style: TextStyle(
-              fontSize: 20,
-              color: const Color(0xff233B55),
-              fontFamily: GoogleFonts.openSans().fontFamily,
-            ),
-          ),
-          Text(
-            'Welcome to our app',
+            'Welcome to the AI ​​conversation',
             style: TextStyle(
               fontSize: 20,
               color: const Color(0xff233B55),

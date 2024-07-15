@@ -1,6 +1,7 @@
 import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/core/utils/route.dart';
 import 'package:doctor/core/widgets/navigation_bar_view.dart';
+import 'package:doctor/features/chat/view/chat_ai_view.dart';
 import 'package:doctor/features/doc_details/view/doc_details_view.dart';
 import 'package:doctor/features/home/data/models/specialization_response_api.dart';
 import 'package:doctor/features/home/logic/home_cubit.dart';
@@ -54,6 +55,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const NavigationBarView(),
         );
+        case Routes.chataiScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ChatAiPage(),
+        );
       case Routes.securityScreen:
         return MaterialPageRoute(
           builder: (_) => const SecurityView(),
@@ -84,10 +89,6 @@ class AppRouter {
             child: const SighupView(),
           ),
         );
-      // case Routes.navigationScreen:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const NavigationBarView(),
-      //   );
       case Routes.homeScreen:
         // final loginResponse = arguments;
         return MaterialPageRoute(
@@ -126,7 +127,6 @@ class AppRouter {
             doctors: docId as Doctors,
           ),
         );
-
       default:
         return null;
     }
