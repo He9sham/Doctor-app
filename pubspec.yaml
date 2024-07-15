@@ -28,9 +28,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  flutter: 
-    sdk: flutter
-  # Package for displaying dialogs in a customizable and attractive way.
   awesome_dialog: ^3.2.1
   # Tool for running code generators, often used with packages like `freezed` for code generation.
   build_runner: ^2.4.10 
@@ -90,8 +87,12 @@ dependencies:
   shimmer: ^3.0.0 
   # Timezone support for Flutter.
   timezone: ^0.9.3
+  # chat ai for flutter
+  flutter_gemini_bot: ^0.0.4
+
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter

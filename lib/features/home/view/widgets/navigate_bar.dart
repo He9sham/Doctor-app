@@ -1,4 +1,5 @@
 import 'package:doctor/features/home/view/home_page.dart';
+import 'package:doctor/features/home/view/welcome_page.dart';
 import 'package:doctor/features/profile_user/view/profile_view.dart';
 import 'package:doctor/features/setting/view/setting_view.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
@@ -19,6 +20,7 @@ class _NavigateBarState extends State<NavigateBar> {
         // loginResponse: LoginResponse(),
         ),
     const ProfileView(),
+    const WelcomePage(),
     const SettingView(),
   ];
 
@@ -85,6 +87,13 @@ class _NavigateBarState extends State<NavigateBar> {
                     DotNavigationBarItem(
                       icon: Icon(
                         Icons.person,
+                        size: iconSize,
+                      ),
+                      selectedColor: const Color.fromARGB(255, 214, 211, 216),
+                    ),
+                    DotNavigationBarItem(
+                      icon: Icon(
+                        Icons.chat,
                         size: iconSize,
                       ),
                       selectedColor: const Color(0xffAB70DF),

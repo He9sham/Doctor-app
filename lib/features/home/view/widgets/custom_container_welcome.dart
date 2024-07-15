@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomContanierWelcome extends StatelessWidget {
@@ -13,10 +12,11 @@ class CustomContanierWelcome extends StatelessWidget {
         color: const Color(0xff336EA6),
         borderRadius: BorderRadius.circular(300),
       ),
-      child: const Icon(
-        Icons.check,
-        size: 150,
-        color: Colors.white,
+      child: CircleAvatar(
+        maxRadius: 24,
+        minRadius: 24,
+        backgroundColor: Colors.black,
+        child: Image.asset('assets/image/Chat_ai.png'),
       ),
     );
   }

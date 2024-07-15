@@ -370,7 +370,7 @@ packages:
     source: hosted
     version: "1.1.0"
   flutter:
-    dependency: "direct main"
+    dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -390,6 +390,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.2"
+  flutter_gemini_bot:
+    dependency: "direct main"
+    description:
+      name: flutter_gemini_bot
+      sha256: "1e0c46b2477383262110edb67fc51ecd2f1f78eafead7accea5f9917cfbbda55"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   flutter_lints:
     dependency: "direct dev"
     description:
